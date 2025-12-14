@@ -63,17 +63,28 @@ import cv2
 
 # --------------------------------------------------------------------------------------
 
+# img= np.zeros((600,600,3),np.uint8)
+# pt1=np.array([[100,100],[200,100],[200,200],[100,200]],np.int32)
+# pt2=np.array([[300,100],[400,200],[300,200]],np.int32)
+#
+# color = (0,0,255)
+# cv2.polylines(img,[pt1,pt2],isClosed=True   ,color = color,thickness=2)
+# cv2.imshow('img',img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+
+
+# ----------------------------------------------------------------------------------------
+
 img= np.zeros((600,600,3),np.uint8)
 pt1=np.array([[100,100],[200,100],[200,200],[100,200]],np.int32)
 pt2=np.array([[300,100],[400,200],[300,200]],np.int32)
 
 color = (0,0,255)
-cv2.polylines(img,[pt1,pt2],isClosed=False,color = color,thickness=2)
+cv2.fillPoly(img,[pt1,pt2],color = color)
 cv2.imshow('img',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-
 
 
 
