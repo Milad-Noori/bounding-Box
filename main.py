@@ -43,5 +43,23 @@ radius = 100
 color = (0,0,255)
 thickness = 1
 cv2.circle(img, center, radius, color, thickness)
-plt.imshow(img)
+
+img1 = np.zeros((500,500,3),dtype="uint8")
+center1 = (250,250)
+radius1 = 200
+color1 = (255,0,0)
+thickness1 = 1
+cv2.circle(img1, center1, radius1, color1, thickness1)
+
+img2 = np.zeros((500,500,3),dtype="uint8")
+center2 = (20,50)
+radius2 = 50
+color2 = (180,180,180)
+thickness2 = 1
+cv2.circle(img2, center2, radius2, color2, thickness2)
+
+img3 = img1+img2+img
+plt.imshow(img3)
 plt.show()
+
+
