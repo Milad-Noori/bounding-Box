@@ -76,16 +76,26 @@ import cv2
 
 # ----------------------------------------------------------------------------------------
 
-img= np.zeros((600,600,3),np.uint8)
-pt1=np.array([[100,100],[200,100],[200,200],[100,200]],np.int32)
-pt2=np.array([[300,100],[400,200],[300,200]],np.int32)
+# img= np.zeros((600,600,3),np.uint8)
+# pt1=np.array([[100,100],[200,100],[200,200],[100,200]],np.int32)
+# pt2=np.array([[300,100],[400,200],[300,200]],np.int32)
+#
+# color = (0,0,255)
+# cv2.fillConvexPoly(img,[pt1,pt2],color = color)
+# cv2.imshow('img',img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
+# ------------------------------------------------------------------------------------------
+img= np.zeros((400,400,3),np.uint8)
+pt1=(100,100)
+pt2=(200,200)
 color = (0,0,255)
-cv2.fillPoly(img,[pt1,pt2],color = color)
-cv2.imshow('img',img)
+thickness = 2
+cv2.arrowedLine(img,pt1,pt2,color = color,thickness = 2,tipLength = 0.445)
+cv2.imshow('arrow_line',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
 
 
 
